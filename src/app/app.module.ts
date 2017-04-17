@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import {ChartModule} from 'angular2-highcharts';
+import {Appservice} from './services/app.service';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -12,9 +13,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ChartModule
   ],
-  providers: [],
+  providers: [Appservice],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
